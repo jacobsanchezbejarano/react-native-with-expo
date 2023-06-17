@@ -1,5 +1,6 @@
 import React from "react";
 import { Text, View, FlatList } from "react-native";
+import RecipesItem from "./RecipesItem";
 
 export default class Recipes extends React.Component {
     constructor(props) {
@@ -44,11 +45,11 @@ export default class Recipes extends React.Component {
             <View>
                 <FlatList
                 data={this.state.recipe}
-        renderItem={({item: recipe})=> (
-           <RecipesItem {...recipe} />
-        )}
-        >
-        </FlatList>
+                renderItem={
+                    ({item: recipe})=> <RecipesItem {...recipe} />
+                }
+                >
+                </FlatList>
         
 
             </View>

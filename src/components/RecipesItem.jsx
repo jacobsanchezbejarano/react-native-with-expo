@@ -4,7 +4,7 @@ import StyledText from "./StyledText";
 const RecipesItem = (props) => {
     return (
         <View style={styles.card} key={props._id}>
-              <StyledText color='primary' fontWeight='bold'>{props.recipe_name}</StyledText>
+              <StyledText color='primary' fontWeight='bold'>{props.recipe_title}</StyledText>
               <StyledText blue>Ingredients {props.ingredients}</StyledText>
         </View>
     )
@@ -16,6 +16,7 @@ const styles = StyleSheet.create({
     card: {
         backgroundColor: 'darkgray',
         borderRadius: 10,
-        padding: 10
+        padding: 10,
+        margin: 3
     }
 })
